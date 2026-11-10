@@ -46,15 +46,15 @@ The workshop is **nonarchival**. Accepted papers and slides are posted on the we
 
 ## Organizers
 
-- Vijay Janapa Reddi (Harvard University)
-- Zishen Wan (Columbia University)
-- Souvik Kundu (Intel Labs)
-- Ankita Nayak (Gimlet Labs)
-- Arya Tschand (Modal)
 - Alexander Ingare (Harvard University) — primary contact
 - Andy Cheng (Harvard University)
 - Chenyu Wang (Harvard University)
 - Shvetank Prakash (Harvard University)
+- Arya Tschand (Modal)
+- Ankita Nayak (Gimlet Labs)
+- Souvik Kundu (Intel Labs)
+- Zishen Wan (Columbia University)
+- Vijay Janapa Reddi (Harvard University)
 
 ## Previous editions
 

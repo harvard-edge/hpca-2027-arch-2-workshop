@@ -113,4 +113,4 @@ Search for `TODO` in `index.html` to find every placeholder.
 - [x] HPCA 2027 LaTeX template link
 - [x] Review model (single-blind)
 - [x] Souvik Kundu photo
-- [ ] Souvik Kundu homepage link
+- [x] Souvik Kundu homepage link

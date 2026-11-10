@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture 2.0 Workshop | HPCA 2027</title>
+  <meta name="description" content="Architecture 2.0 at HPCA 2027: a full-day workshop with contributed papers, invited talks, and hands-on tutorials on agentic AI for computing systems design.">
+  <meta name="theme-color" content="#972b34">
+  <meta property="og:title" content="Architecture 2.0 Workshop | HPCA 2027">
+  <meta property="og:description" content="Agentic AI for Computing Systems Design · Full-day workshop and hands-on tutorials at HPCA 2027, Salt Lake City, Utah.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ NAVIGATION ============================ -->
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Architecture <span>2.0</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Menu</span><span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#program">Program</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#resources">Resources</a>
+      <a href="#team">Team</a>
+      <!-- TODO: Replace href with the OpenReview venue URL. -->
+      <a class="nav-cta js-openreview" href="#cfp">Submit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <!-- TODO: Confirm the workshop day and room when the HPCA 2027 program is posted. -->
+      <p class="eyebrow">HPCA 2027 · Salt Lake City, Utah</p>
+      <h1>Architecture <span>2.0</span></h1>
+      <p class="hero-subtitle">Workshop &amp; Tutorials on<br>Agentic AI for Computing Systems Design</p>
+      <p class="hero-date">Full-day event · March 20–24, 2027 <span class="tag">Day TBA</span></p>
+      <div class="hero-actions">
+        <a class="button primary" href="#cfp">Call for papers <span aria-hidden="true">↓</span></a>
+        <a class="button secondary" href="https://conf.researchr.org/home/hpca-2027" target="_blank" rel="noopener">HPCA 2027 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <!-- Design-loop figure: propose → implement → test → refine -->
+    <figure class="hero-figure" aria-label="The agentic design loop: propose, implement, test, refine.">
+      <svg viewBox="0 0 320 320" role="img" aria-hidden="true">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="loop-arrowhead"/>
+          </marker>
+        </defs>
+        <circle cx="160" cy="160" r="112" class="loop-track"/>
+        <path d="M 182 50 A 112 112 0 0 1 270 138" class="loop-arc" marker-end="url(#arrow)"/>
+        <path d="M 270 182 A 112 112 0 0 1 182 270" class="loop-arc" marker-end="url(#arrow)"/>
+        <path d="M 138 270 A 112 112 0 0 1 50 182" class="loop-arc" marker-end="url(#arrow)"/>
+        <path d="M 50 138 A 112 112 0 0 1 138 50" class="loop-arc" marker-end="url(#arrow)"/>
+        <g class="loop-node" data-step="0"><circle cx="160" cy="48" r="30"/><text x="160" y="52">Propose</text></g>
+        <g class="loop-node" data-step="1"><circle cx="272" cy="160" r="30"/><text x="272" y="164">Build</text></g>
+        <g class="loop-node" data-step="2"><circle cx="160" cy="272" r="30"/><text x="160" y="276">Test</text></g>
+        <g class="loop-node" data-step="3"><circle cx="48" cy="160" r="30"/><text x="48" y="164">Refine</text></g>
+        <text x="160" y="152" class="loop-center">agent</text>
+        <text x="160" y="174" class="loop-center small">+ architect</text>
+      </svg>
+    </figure>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================ ABOUT ============================ -->
+<section id="about" class="section">
+  <div class="container about-layout">
+    <div>
+      <p class="section-label">About the workshop</p>
+      <h2>AI agents in the<br>design loop.</h2>
+    </div>
+    <div class="about-copy">
+      <p>AI agents are beginning to participate directly in computing-system design: they reason about architectural tradeoffs, generate and optimize kernels, run experiments, and interpret simulation and physical-design feedback. These capabilities raise questions that span computer architecture, compilers, operating systems, and electronic design automation.</p>
+      <p>How should agents incorporate architectural knowledge? What tools and feedback enable effective design exploration? How can researchers establish correctness, measure improvements against strong baselines, and account for the cost of agent-driven experimentation?</p>
+      <p><strong>Architecture 2.0</strong> brings together researchers and practitioners to examine these questions through contributed research, invited talks, and hands-on tutorials. We focus on agents that iteratively <em>propose, implement, test, and refine</em> solutions, and on the architectural expertise and rigorous evaluation needed to make them useful.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="callout">
+      <p class="callout-label">Toward the CCC Visioning Workshop</p>
+      <p>This HPCA event is a community-building primer for an approved <strong>Computing Community Consortium (CCC) Visioning Workshop</strong> on this topic, to be held at ISCA in June 2027. Contributed talks, tutorial experience, and the closing discussion will feed directly into the CCC agenda. Participation at HPCA is open to everyone, whether or not you attend the CCC workshop.</p>
+    </aside>
+  </div>
+
+  <div class="container event-details">
+    <div>
+      <span class="detail-label">When</span>
+      <strong>Full day · Date TBA</strong>
+      <span>HPCA 2027 runs March 20–24, 2027</span>
+    </div>
+    <div>
+      <span class="detail-label">Where</span>
+      <strong>HPCA 2027 · Salt Lake City, Utah</strong>
+      <a href="https://conf.researchr.org/venue/hpca-2027/hpca-cgo-ppopp-cc-2027-venue" target="_blank" rel="noopener">Co-located with CGO, PPoPP &amp; CC <span aria-hidden="true">↗</span></a>
+    </div>
+    <div>
+      <span class="detail-label">Format</span>
+      <strong>Papers · Keynotes · Tutorials</strong>
+      <span>Bring a laptop for the hands-on sessions</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROGRAM ============================ -->
+<section id="program" class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Full-day program</p><h2>Tentative schedule</h2></div>
+      <span class="status">Times TBA</span>
+    </div>
+    <p class="section-note">The program below follows our proposal. We will post times, speakers, and accepted papers when they are confirmed.</p>
+
+    <div class="program-grid">
+      <article class="program-block">
+        <h3><span class="program-part">Morning</span> Research</h3>
+        <ol class="timeline">
+          <li><span class="tl-kind">Opening</span>Welcome and introduction to Architecture 2.0</li>
+          <li><span class="tl-kind keynote">Keynote</span>Industry keynote <span class="tbd">Speaker TBA</span></li>
+          <li><span class="tl-kind paper">Papers</span>Contributed presentations from the call for papers</li>
+          <li><span class="tl-kind">Break</span>Coffee break</li>
+          <li><span class="tl-kind paper">Papers</span>Contributed presentations and research discussion</li>
+          <li><span class="tl-kind">Break</span>Lunch</li>
+        </ol>
+      </article>
+      <article class="program-block">
+        <h3><span class="program-part">Afternoon</span> Hands-on</h3>
+        <ol class="timeline">
+          <li><span class="tl-kind keynote">Keynote</span>Academic keynote <span class="tbd">Speaker TBA</span></li>
+          <li><span class="tl-kind tutorial">Tutorial</span><a href="#tutorial-software">Software: Hardware-aware GPU kernel optimization</a></li>
+          <li><span class="tl-kind tutorial">Tutorial</span><a href="#tutorial-architecture">Architecture: Benchmarks and reasoning</a></li>
+          <li><span class="tl-kind">Break</span>Coffee break</li>
+          <li><span class="tl-kind tutorial">Tutorial</span><a href="#tutorial-eda">EDA: Macro placement</a></li>
+          <li><span class="tl-kind">Panel</span>Closing discussion with CCC Visioning Workshop organizers</li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TUTORIALS ============================ -->
+<section id="tutorials" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Hands-on tutorials</p><h2>From software to silicon</h2></div>
+    </div>
+    <p class="section-note">Each module follows one common structure, so you can compare how agents behave across very different design domains.</p>
+
+    <ol class="steps" aria-label="Common tutorial structure">
+      <li><span>1</span>Formulate a task</li>
+      <li><span>2</span>Run an agent workflow</li>
+      <li><span>3</span>Inspect its trajectory</li>
+      <li><span>4</span>Validate the result</li>
+      <li><span>5</span>Analyze limitations</li>
+    </ol>
+
+    <div class="card-grid">
+      <article class="card" id="tutorial-software">
+        <p class="card-kicker">Software</p>
+        <h3>Hardware-aware GPU kernel optimization</h3>
+        <p>Explore agent-guided optimization of a selected GPU kernel with cloud GPU resources and inference credits. See validation, profiling, and trajectory analysis, and learn how tool use and run-to-run variation affect results.</p>
+        <p class="card-meta">Presenter TBA</p>
+      </article>
+      <article class="card" id="tutorial-architecture">
+        <p class="card-kicker">Architecture</p>
+        <h3>Benchmarks and reasoning</h3>
+        <p>Evaluate an LLM on a small public subset of <a href="https://quarch.ai/" target="_blank" rel="noopener">QuArch</a>, then examine ArchEval's evaluation settings, simulator use, and baseline-normalized scores. Learn to separate reasoning failures from tool-use and evaluation failures.</p>
+        <p class="card-meta">Presenter TBA</p>
+      </article>
+      <article class="card" id="tutorial-eda">
+        <p class="card-kicker">EDA</p>
+        <h3>Macro placement</h3>
+        <p>Use a simple circuit to explore how visual feedback can guide macro placement. Reasoning traces and placement animations show how a vision-language model and an analytical placer interact, including quality, constraints, and failure modes.</p>
+        <p class="card-meta">Presenter TBA</p>
+      </article>
+    </div>
+
+    <div class="prereq">
+      <h3>What to bring</h3>
+      <ul>
+        <li>A laptop with a modern web browser.</li>
+        <li>Basic knowledge of computer architecture and programming.</li>
+        <li>We provide cloud GPU access, inference credits, and prepared environments.</li>
+        <li>Prepared traces and precomputed results are available if live services fail.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CALL FOR PAPERS ============================ -->
+<section id="cfp" class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Contribute</p><h2>Call for papers</h2></div>
+      <span class="status open">Submissions open</span>
+    </div>
+
+    <div class="cfp-layout">
+      <div class="cfp-main">
+        <p>We invite research on how AI can advance the design, analysis, optimization, and evaluation of computing systems. We welcome early results, completed research, and perspectives that identify important problems.</p>
+
+        <h3>Topics of interest</h3>
+        <div class="topic-groups">
+          <div class="topic-group">
+            <h4>Architecture</h4>
+            <ul>
+              <li>AI-driven microarchitecture and accelerator design</li>
+              <li>Design-space exploration</li>
+              <li>RTL generation and physical design</li>
+              <li>Memory and interconnects</li>
+              <li>Performance, power, and reliability modeling</li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h4>Systems</h4>
+            <ul>
+              <li>Kernel generation and tuning</li>
+              <li>Compiler, runtime, and OS optimization</li>
+              <li>Resource management</li>
+              <li>Bottleneck diagnosis</li>
+              <li>Hardware–software co-design</li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h4>Infrastructure &amp; evaluation</h4>
+            <ul>
+              <li>Datasets and domain-specialized models</li>
+              <li>Simulators and benchmarks</li>
+              <li>Correctness checking</li>
+              <li>Reproducible agentic workflows</li>
+              <li>Evaluation of agent effectiveness and experimentation cost</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Submission categories</h3>
+        <table class="data-table">
+          <thead><tr><th scope="col">Category</th><th scope="col">Length</th><th scope="col">Notes</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Work-in-progress paper</th><td>Up to 4 pages</td><td>Early results and ongoing work</td></tr>
+            <tr><th scope="row">Research summary</th><td>Up to 2 pages</td><td>May describe completed or previously published work, which must be clearly identified</td></tr>
+            <tr><th scope="row">Position paper</th><td>Up to 2 pages</td><td>Perspectives that identify important problems</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Review and publication</h3>
+        <ul class="plain-list">
+          <li>Reviewers evaluate submissions for relevance, technical substance, and potential to stimulate discussion.</li>
+          <li>Selected contributions are presented at the workshop.</li>
+          <li><strong>The workshop is nonarchival.</strong> Authors are free to publish extended versions elsewhere. With author permission, accepted papers and slides are posted on this website.</li>
+        </ul>
+      </div>
+
+      <aside class="cfp-side">
+        <h3>Important dates</h3>
+        <!-- TODO: Fill in dates (ISO format in data-date, display text inside <strong>). Rows with past dates are marked automatically. -->
+        <ul class="dates" id="important-dates">
+          <li data-date=""><span>Submission deadline</span><strong>TBA (AoE)</strong></li>
+          <li data-date=""><span>Author notification</span><strong>TBA</strong></li>
+          <li data-date=""><span>Camera-ready slides &amp; PDF</span><strong>TBA</strong></li>
+          <li data-date=""><span>Workshop</span><strong>TBA · HPCA 2027</strong></li>
+        </ul>
+        <p class="countdown" id="deadline-countdown" hidden></p>
+        <!-- TODO: Replace href with the OpenReview venue URL. -->
+        <a class="button primary block js-openreview" href="#cfp">OpenReview submission site <span aria-hidden="true">↗</span></a>
+        <p class="side-note">Format: <!-- TODO: Link the HPCA 2027 template. -->HPCA 2027 LaTeX template.<!-- TODO: State the review model (single- or double-blind) to match OpenReview. --></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAST EDITIONS ============================ -->
+<section id="history" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Growing community</p><h2>Previous editions</h2></div>
+    </div>
+    <p class="section-note">This is the fourth Architecture 2.0 event. HPCA 2027 adds hands-on tutorials and a shared focus on agentic workflows to the papers and talks of past editions.</p>
+    <div class="editions">
+      <a class="edition" href="https://harvard-edge.github.io/asplos-26-arch-2-workshop/" target="_blank" rel="noopener">
+        <span class="edition-venue">ASPLOS '26</span>
+        <span class="edition-date">March 23, 2026</span>
+        <span class="edition-body">13 papers · 2 keynotes</span>
+        <span class="edition-count">100–150 attendees</span>
+      </a>
+      <a class="edition" href="https://harvard-edge.github.io/isca-26-arch-2-workshop/" target="_blank" rel="noopener">
+        <span class="edition-venue">ISCA '26</span>
+        <span class="edition-date">June 27, 2026</span>
+        <span class="edition-body">13 papers · 4 keynotes · 1 tutorial</span>
+        <span class="edition-count">100–150 attendees</span>
+      </a>
+      <a class="edition" href="https://harvard-edge.github.io/iiswc-26-arch-2-tutorial/" target="_blank" rel="noopener">
+        <span class="edition-venue">IISWC '26</span>
+        <span class="edition-date">September 27, 2026</span>
+        <span class="edition-body">5 technical tutorial sessions</span>
+        <span class="edition-count">60–70 attendees</span>
+      </a>
+      <div class="edition current">
+        <span class="edition-venue">HPCA '27</span>
+        <span class="edition-date">March 2027</span>
+        <span class="edition-body">Papers · keynotes · 3 hands-on tutorials</span>
+        <span class="edition-count">You are here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESOURCES ============================ -->
+<section id="resources" class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Explore Architecture 2.0</p><h2>Resources</h2></div>
+    </div>
+    <div class="resource-groups">
+      <section class="resource-group" aria-labelledby="rg-books">
+        <h3 id="rg-books">Books &amp; guides</h3>
+        <ul class="resource-list">
+          <li><a href="https://arch2.mlsysbook.ai/" target="_blank" rel="noopener">Architecture 2.0: Principles of AI-Native System and Chip Design</a><span class="resource-meta">Online book</span></li>
+          <li><a href="https://arch2.mlsysbook.ai/readings.html" target="_blank" rel="noopener">Architecture 2.0 Reading List</a><span class="resource-meta">Curated reading</span></li>
+          <li><a href="https://arch2.mlsysbook.ai/start.html" target="_blank" rel="noopener">Design-Loop Card &amp; Labs</a><span class="resource-meta">Practical guide</span></li>
+        </ul>
+      </section>
+      <section class="resource-group" aria-labelledby="rg-papers">
+        <h3 id="rg-papers">Papers &amp; articles</h3>
+        <ul class="resource-list">
+          <li><a href="https://www.computer.org/csdl/magazine/co/2025/02/10857820/23VCdDhsEAo" target="_blank" rel="noopener">Architecture 2.0: Foundations of Artificial Intelligence Agents for Modern Computer System Design</a><span class="resource-meta">IEEE Computer</span></li>
+          <li><a href="https://arxiv.org/abs/2602.15241" target="_blank" rel="noopener">GenAI for Systems: Recurring Challenges and Design Principles from Software to Silicon</a><span class="resource-meta">arXiv</span></li>
+          <li><a href="https://arxiv.org/abs/2602.22425" target="_blank" rel="noopener">ArchAgent: Agentic AI-driven Computer Architecture Discovery</a><span class="resource-meta">arXiv</span></li>
+          <li><a href="https://arxiv.org/abs/2604.03312" target="_blank" rel="noopener">Computer Architecture’s AlphaZero Moment: Automated Discovery in an Encircled World</a><span class="resource-meta">arXiv</span></li>
+          <li><a href="https://arxiv.org/abs/2604.25083" target="_blank" rel="noopener">Agentic Architect: An Agentic AI Framework for Architecture Design Exploration and Optimization</a><span class="resource-meta">arXiv</span></li>
+          <li><a href="https://arxiv.org/abs/2606.27350" target="_blank" rel="noopener">CHIA: An Open-Source Framework for Principled, Agentic AI-Driven Hardware/Software Co-Design Research</a><span class="resource-meta">arXiv</span></li>
+        </ul>
+      </section>
+      <section class="resource-group" aria-labelledby="rg-blogs">
+        <h3 id="rg-blogs">Perspectives &amp; blog posts</h3>
+        <ul class="resource-list">
+          <li><a href="https://www.sigarch.org/a-computer-architects-guide-to-designing-abstractions-for-intelligent-systems/" target="_blank" rel="noopener">A Computer Architect’s Guide to Designing Abstractions for Intelligent Systems</a><span class="resource-meta">SIGARCH Blog</span></li>
+          <li><a href="https://www.sigarch.org/architecture-2-0-why-computer-architects-need-a-data-centric-ai-gymnasium/" target="_blank" rel="noopener">Architecture 2.0: Why Computer Architects Need a Data-Centric AI Gymnasium</a><span class="resource-meta">SIGARCH Blog</span></li>
+          <li><a href="https://www.sigarch.org/architecture-systems-are-changing-the-architects-role-in-the-era-of-agentic-co-design/" target="_blank" rel="noopener">Architecture &amp; Systems are Changing: The Architect’s Role in the Era of Agentic Co-Design</a><span class="resource-meta">SIGARCH Blog</span></li>
+        </ul>
+      </section>
+      <section class="resource-group" aria-labelledby="rg-bench">
+        <h3 id="rg-bench">Benchmarks &amp; datasets</h3>
+        <ul class="resource-list">
+          <li><a href="https://quarch.ai/" target="_blank" rel="noopener">QuArch</a><span class="resource-meta">Benchmark website</span></li>
+          <li><a href="https://arxiv.org/abs/2510.22087" target="_blank" rel="noopener">QuArch: A Benchmark for Evaluating LLM Reasoning in Computer Architecture</a><span class="resource-meta">Paper</span></li>
+          <li><a href="https://arch2.mlsysbook.ai/data.html" target="_blank" rel="noopener">Architecture 2.0 Empirical Data</a><span class="resource-meta">Studies &amp; datasets</span></li>
+        </ul>
+      </section>
+      <section class="resource-group" aria-labelledby="rg-tools">
+        <h3 id="rg-tools">Tools &amp; infrastructure</h3>
+        <ul class="resource-list">
+          <li><a href="https://arch2.mlsysbook.ai/tools/index.html" target="_blank" rel="noopener">Architecture 2.0 Tool Registry</a><span class="resource-meta">Simulators, models, verification &amp; agentic workflows</span></li>
+          <li><a href="https://github.com/ucb-bar/chia" target="_blank" rel="noopener">CHIA</a><span class="resource-meta">Open-source framework for AI-driven HW/SW co-design</span></li>
+        </ul>
+      </section>
+      <section class="resource-group" aria-labelledby="rg-community">
+        <h3 id="rg-community">Courses &amp; community</h3>
+        <ul class="resource-list">
+          <li><a href="https://harvard-edge.github.io/cs249r_fall2025/" target="_blank" rel="noopener">Harvard CS249r: Architecture 2.0 — Agentic AI for Computer Systems Design</a><span class="resource-meta">Fall 2025 course</span></li>
+          <li><a href="https://sites.google.com/g.harvard.edu/arch2/home" target="_blank" rel="noopener">Architecture 2.0 Online Community Workshop</a><span class="resource-meta">Community</span></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TEAM ============================ -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="section-label">Organizers &amp; tutorial team</p><h2>Organizing team</h2></div>
+    </div>
+    <div class="team-grid">
+      <article class="person"><a href="https://vijay.seas.harvard.edu/" target="_blank" rel="noopener"><img src="images/Vijay.jpg" alt="" width="144" height="144" loading="lazy"><h3>Vijay Janapa Reddi</h3></a><p>Harvard University</p></article>
+      <article class="person"><a href="https://zishenwan.github.io/" target="_blank" rel="noopener"><img src="images/Zishen.jpg" alt="" width="144" height="144" loading="lazy"><h3>Zishen Wan</h3></a><p>Columbia University</p></article>
+      <!-- TODO: Add Souvik Kundu's photo (images/Souvik.jpg) and homepage link. -->
+      <article class="person"><div class="person-link"><img src="images/placeholder.svg" alt="" width="144" height="144" loading="lazy"><h3>Souvik Kundu</h3></div><p>Intel Labs</p></article>
+      <article class="person"><a href="https://www.linkedin.com/in/nayak-ankita/" target="_blank" rel="noopener"><img src="images/Ankita.jpg" alt="" width="144" height="144" loading="lazy"><h3>Ankita Nayak</h3></a><p>Gimlet Labs</p></article>
+      <article class="person"><a href="https://www.aryatschand.com/" target="_blank" rel="noopener"><img src="images/Arya.png" alt="" width="144" height="144" loading="lazy"><h3>Arya Tschand</h3></a><p>Modal</p></article>
+      <article class="person"><a href="https://www.linkedin.com/in/alexander-ingare/" target="_blank" rel="noopener"><img src="images/Zander.jpg" alt="" width="144" height="144" loading="lazy"><h3>Zander Ingare</h3></a><p>Harvard University</p></article>
+      <article class="person"><a href="https://www.linkedin.com/in/andrew-cheng-074a991a5/" target="_blank" rel="noopener"><img src="images/Andy.jpeg" alt="" width="144" height="144" loading="lazy"><h3>Andy Cheng</h3></a><p>Harvard University</p></article>
+      <article class="person"><a href="https://iamchenyuwang.github.io/" target="_blank" rel="noopener"><img src="images/Chenyu.jpg" alt="" width="144" height="144" loading="lazy"><h3>Chenyu Wang</h3></a><p>Harvard University</p></article>
+      <article class="person"><a href="https://www.linkedin.com/in/shvetank-prakash/" target="_blank" rel="noopener"><img src="images/Shvetank.jpg" alt="" width="144" height="144" loading="lazy"><h3>Shvetank Prakash</h3></a><p>Harvard University</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="#top">Architecture <span>2.0</span></a>
+      <p>Workshop &amp; Tutorials @ HPCA 2027<br>Salt Lake City, Utah · March 2027</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://harvard-edge.github.io/asplos-26-arch-2-workshop/" target="_blank" rel="noopener">ASPLOS '26</a>
+      <a href="https://harvard-edge.github.io/isca-26-arch-2-workshop/" target="_blank" rel="noopener">ISCA '26</a>
+      <a href="https://harvard-edge.github.io/iiswc-26-arch-2-tutorial/" target="_blank" rel="noopener">IISWC '26</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Site settings. Edit these values; script.js applies them. */
+  window.SITE_CONFIG = {
+    // TODO: Paste the OpenReview venue URL. While empty, "Submit" buttons link to #cfp.
+    openreviewUrl: ""
+  };
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>

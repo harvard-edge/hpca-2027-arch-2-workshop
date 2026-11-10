@@ -107,7 +107,7 @@ Search for `TODO` in `index.html` to find every placeholder.
 
 - [ ] OpenReview venue URL
 - [x] CFP window (Dec 1, 2026 – Feb 1, 2027)
-- [ ] Notification and camera-ready dates
+- [x] Author notification date (TBD on site; no camera-ready)
 - [ ] Workshop day and room at HPCA 2027
 - [ ] Keynote speakers and tutorial presenters (TBA)
 - [x] HPCA 2027 LaTeX template link

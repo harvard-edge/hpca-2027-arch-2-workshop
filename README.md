@@ -40,7 +40,7 @@ Topics include AI for architecture (microarchitecture and accelerator design, DS
 | Research summary (completed or previously published work, clearly identified) | up to 2 pages |
 | Position paper | up to 2 pages |
 
-**Submission window:** December 1, 2026 – February 1, 2027 (AoE). Review is **single-blind** (include author names and affiliations).
+**Submission window:** December 1, 2026 – February 1, 2027 (AoE). Review is **single-blind** (include author names and affiliations). Format: [HPCA 2027 paper template](https://conf.researchr.org/track/hpca-2027/hpca-2027-main-conference) ([LaTeX download](https://conf.researchr.org/getImage/hpca-2027/orig/hpca2027-latex-template.tar.gz)).
 
 The workshop is **nonarchival**. Accepted papers and slides are posted on the website with author permission. Submissions go through OpenReview (link coming soon).
 
@@ -110,7 +110,7 @@ Search for `TODO` in `index.html` to find every placeholder.
 - [ ] Notification and camera-ready dates
 - [ ] Workshop day and room at HPCA 2027
 - [ ] Keynote speakers and tutorial presenters (TBA)
-- [ ] HPCA 2027 LaTeX template link
+- [x] HPCA 2027 LaTeX template link
 - [x] Review model (single-blind)
 - [x] Souvik Kundu photo
 - [ ] Souvik Kundu homepage link

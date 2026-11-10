@@ -133,6 +133,7 @@ img { max-width: 100%; display: block; }
 .button.secondary { color: var(--primary); background: transparent; }
 .button.secondary:hover { background: var(--primary-soft); }
 .button.block { display: flex; width: 100%; }
+.button.disabled, .button.disabled:hover { background: var(--line); border-color: var(--line); color: var(--muted); cursor: not-allowed; transform: none; }
 .tag, .status {
   display: inline-block; font-family: var(--mono); font-size: .72rem; font-weight: 500;
   text-transform: uppercase; letter-spacing: .06em; padding: .2rem .55rem; border-radius: 999px;

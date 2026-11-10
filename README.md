@@ -40,7 +40,9 @@ Topics include AI for architecture (microarchitecture and accelerator design, DS
 | Research summary (completed or previously published work, clearly identified) | up to 2 pages |
 | Position paper | up to 2 pages |
 
-The workshop is **nonarchival**. Accepted papers and slides are posted on the website with author permission. Submissions go through OpenReview.
+**Submission window:** December 1, 2026 – February 1, 2027 (AoE). Review is **single-blind** (include author names and affiliations).
+
+The workshop is **nonarchival**. Accepted papers and slides are posted on the website with author permission. Submissions go through OpenReview (link coming soon).
 
 ## Organizers
 
@@ -49,7 +51,7 @@ The workshop is **nonarchival**. Accepted papers and slides are posted on the we
 - Souvik Kundu (Intel Labs)
 - Ankita Nayak (Gimlet Labs)
 - Arya Tschand (Modal)
-- Zander Ingare (Harvard University) — primary contact
+- Alexander Ingare (Harvard University) — primary contact
 - Andy Cheng (Harvard University)
 - Chenyu Wang (Harvard University)
 - Shvetank Prakash (Harvard University)
@@ -88,6 +90,7 @@ python3 -m http.server 8000
 
 - **OpenReview link:** set `openreviewUrl` in the `SITE_CONFIG` block near the end of `index.html`. All "Submit" buttons use it.
 - **Important dates:** in `#important-dates`, set `data-date="YYYY-MM-DD"` and the display text. Past dates are struck through, and the next date gets a countdown (AoE).
+- **CFP status badge:** `#cfp-status` reads `data-open` and `data-close` and shows "opens", "open", or "closed" by date.
 - **Schedule:** edit the `#program` timeline. Replace "Speaker TBA" and add times when confirmed.
 - **Accepted papers:** put PDFs in `papers/` and slides in `slides/`, then link them from the program.
 - **Organizer photo:** add the image to `images/` and update the `src` in `#team`.
@@ -103,8 +106,11 @@ Search for `TODO` in `index.html` to find every placeholder.
 ### Open items
 
 - [ ] OpenReview venue URL
-- [ ] CFP dates (submission, notification, camera-ready)
+- [x] CFP window (Dec 1, 2026 – Feb 1, 2027)
+- [ ] Notification and camera-ready dates
 - [ ] Workshop day and room at HPCA 2027
-- [ ] Keynote speakers and tutorial presenters
-- [ ] HPCA 2027 LaTeX template link and review model (single- or double-blind)
-- [ ] Souvik Kundu photo and homepage link
+- [ ] Keynote speakers and tutorial presenters (TBA)
+- [ ] HPCA 2027 LaTeX template link
+- [x] Review model (single-blind)
+- [x] Souvik Kundu photo
+- [ ] Souvik Kundu homepage link

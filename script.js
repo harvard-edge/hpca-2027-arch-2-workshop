@@ -15,6 +15,34 @@
       a.target = '_blank';
       a.rel = 'noopener';
     });
+  } else {
+    const btn = document.getElementById('openreview-button');
+    if (btn) {
+      btn.textContent = 'OpenReview link coming soon';
+      btn.classList.add('disabled');
+      btn.setAttribute('aria-disabled', 'true');
+      btn.addEventListener('click', (e) => e.preventDefault());
+    }
+  }
+
+  /* ---------- Dates (Anywhere on Earth, UTC-12) ---------- */
+  const isISO = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s || '');
+  const aoeStartOfDay = (iso) => new Date(iso + 'T00:00:00-12:00');
+  const aoeEndOfDay = (iso) => new Date(iso + 'T23:59:59-12:00');
+  const now = new Date();
+
+  /* ---------- CFP status badge ---------- */
+  const cfpStatus = document.getElementById('cfp-status');
+  if (cfpStatus && isISO(cfpStatus.dataset.open) && isISO(cfpStatus.dataset.close)) {
+    const fmt = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    if (now < aoeStartOfDay(cfpStatus.dataset.open)) {
+      cfpStatus.textContent = `Submissions open ${fmt(cfpStatus.dataset.open)}`;
+    } else if (now <= aoeEndOfDay(cfpStatus.dataset.close)) {
+      cfpStatus.textContent = `Submissions open · due ${fmt(cfpStatus.dataset.close)}`;
+      cfpStatus.classList.add('open');
+    } else {
+      cfpStatus.textContent = 'Submissions closed';
+    }
   }
 
   /* ---------- Navbar: border on scroll, mobile menu ---------- */
@@ -56,13 +84,11 @@
      Each <li> in #important-dates has data-date="YYYY-MM-DD".
      Deadlines use Anywhere on Earth (UTC-12), end of day. */
   const dateItems = Array.from(document.querySelectorAll('#important-dates li[data-date]'));
-  const aoeEndOfDay = (iso) => new Date(iso + 'T23:59:59-12:00');
-  const now = new Date();
   let next = null;
 
   dateItems.forEach((li) => {
     const iso = li.dataset.date;
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) return;
+    if (!isISO(iso)) return;
     const when = aoeEndOfDay(iso);
     if (when < now) li.classList.add('past');
     else if (!next) next = { li, when };
@@ -74,7 +100,7 @@
     if (countdown) {
       const label = next.li.querySelector('span');
       const days = Math.ceil((next.when - now) / 86400000);
-      countdown.textContent = `${label ? label.textContent : 'Next date'}: ${days} day${days === 1 ? '' : 's'} left`;
+      countdown.textContent = `${label ? label.textContent : 'Next date'} in ${days} day${days === 1 ? '' : 's'}`;
       countdown.hidden = false;
     }
   }
